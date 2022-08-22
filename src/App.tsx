@@ -1,12 +1,22 @@
 import React from 'react';
-// import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Layout } from 'antd';
+import { AppRoutes } from './AppRoutes';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+
+const { Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Hi!!!</header>
-    </div>
+    <>
+      <Layout className="page-section">
+        <Header />
+        <Content className="main-wrap">
+          <AppRoutes />
+        </Content>
+        <Footer />
+      </Layout>
+    </>
   );
 }
 
