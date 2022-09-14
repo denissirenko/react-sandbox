@@ -1,8 +1,8 @@
 import React from 'react';
 import { Layout } from 'antd';
 import { AppRoutes } from './AppRoutes';
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
+import { AppHeader } from './components/Header/Header';
+import { AppFooter } from './components/Footer/Footer';
 
 const { Content } = Layout;
 
@@ -10,11 +10,11 @@ function App() {
   return (
     <>
       <Layout className="page-section">
-        <Header />
+        <AppHeader />
         <Content className="main-wrap">
           <AppRoutes />
         </Content>
-        <Footer />
+        <AppFooter />
       </Layout>
     </>
   );

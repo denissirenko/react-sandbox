@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
+import { RootState } from '../../app/store';
 
 export type Product = {
   id: string;
