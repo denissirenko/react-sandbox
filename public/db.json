@@ -72,7 +72,7 @@
     },
     {
       "id": "jko2vslbj4",
-      "title": "Scoda",
+      "title": "Skoda",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 600,
       "inCart": false
@@ -117,6 +117,13 @@
       "title": "Hyundai",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 900,
+      "inCart": false
+    },
+    {
+      "title": "Lambo",
+      "description": "desc",
+      "price": "8000",
+      "id": "1663230787599",
       "inCart": false
     }
   ],

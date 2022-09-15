@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
 export type Product = {
@@ -21,7 +21,7 @@ const initialState: CardsState = {
 };
 
 export const fetchProducts = createAsyncThunk('product/fetchProductsStatus', async () => {
-  const { data } = await axios.get('http://localhost:3001/products');
+  const { data } = await axios.get('/products');
   return data;
 });
 
@@ -29,8 +29,9 @@ export const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    setItems(state, action: PayloadAction<Product[]>) {
-      state.products = action.payload;
+    remove: (state, action) => {
+      state.products = state.products.filter((product) => product.id !== action.payload);
+      axios.delete(`http://localhost:3001/products/${action.payload}`);
     },
   },
   extraReducers: (builder) => {
@@ -52,6 +53,6 @@ export const productsSlice = createSlice({
 
 export const selectProductsData = (state: RootState) => state.products;
 
-export const { setItems } = productsSlice.actions;
+export const { remove } = productsSlice.actions;
 
 export default productsSlice.reducer;

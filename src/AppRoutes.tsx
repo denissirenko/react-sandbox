@@ -12,7 +12,7 @@ export const AppRoutes = () => {
         <Route path="/" element={<Main />} />
         <Route path="cart" element={<Cart />} />
         <Route path="create" element={<Create />} />
-        <Route path="view" element={<View />} />
+        <Route path="view/:id" element={<View />} />
       </Routes>
     </div>
   );

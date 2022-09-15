@@ -24,6 +24,7 @@ body {
 }
 
 .main-wrap {
+  padding: 20px 0;
   flex: 1 0 auto;
 }
 
