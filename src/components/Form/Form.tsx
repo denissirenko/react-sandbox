@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
+import { selectProductsData } from '../../features/cards/productsSlice';
 import axios from 'axios';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
@@ -15,39 +17,39 @@ type Inputs = {
 };
 
 const emptyProduct = {
+  id: Date.now().toString(),
   title: '',
   description: '',
   price: null,
-  id: Date.now().toString(),
   inCart: false,
 };
 
 export const Form = () => {
-  const [product, setProduct] = useState(emptyProduct);
-  const navigate = useNavigate();
   const { id } = useParams();
-  useEffect(() => {
-    if (id) {
-      axios.get(`/products/${id}`).then((res) => {
-        const data = res.data;
-        setProduct(data);
-      });
-    }
-  }, [id]);
+  const { products } = useSelector(selectProductsData);
+  const productItem = products.find((item) => item.id === id);
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>({
-    defaultValues: product,
+    defaultValues: productItem
+      ? {
+          id: productItem.id,
+          title: productItem.title,
+          description: productItem.description,
+          price: productItem.price,
+          inCart: false,
+        }
+      : emptyProduct,
   });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     if (id) {
       axios.put(`/products/${id}`, data);
       navigate('/');
-      console.log(222);
     } else {
       axios.post('/products', data);
       navigate('/');

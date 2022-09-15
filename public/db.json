@@ -118,13 +118,6 @@
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 900,
       "inCart": false
-    },
-    {
-      "title": "Lambo",
-      "description": "desc",
-      "price": "8000",
-      "id": "1663230787599",
-      "inCart": false
     }
   ],
   "cart": [
