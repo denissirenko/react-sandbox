@@ -12,9 +12,11 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import productsSlice from '../features/cards/productsSlice';
+import cartSlice from '../features/cart/cartSlice';
 
 const rootReducer = combineReducers({
   products: productsSlice,
+  cart: cartSlice,
 });
 
 const persistConfig = {

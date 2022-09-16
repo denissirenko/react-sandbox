@@ -5,7 +5,7 @@
       "title": "Audi",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 100,
-      "inCart": true
+      "inCart": false
     },
     {
       "id": "BMW",
@@ -117,6 +117,20 @@
       "title": "Hyundai",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
       "price": 900,
+      "inCart": false
+    },
+    {
+      "id": "1663314759708",
+      "title": "scoda",
+      "description": "description Scoda",
+      "price": "50000",
+      "inCart": false
+    },
+    {
+      "id": "1663328847575",
+      "title": "Lambo",
+      "description": "Desc Lambo",
+      "price": "2222",
       "inCart": false
     }
   ],
