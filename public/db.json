@@ -4,7 +4,7 @@
       "id": "bix27468fjc",
       "title": "Audi",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, qui?",
-      "price": 100,
+      "price": "1000",
       "inCart": false
     },
     {

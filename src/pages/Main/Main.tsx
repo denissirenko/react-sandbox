@@ -18,6 +18,7 @@ export const Main = () => {
 
   return (
     <>
+      <h1>vsdfbsdb</h1>
       <BtnBlock />
       {status === 'loading' ? <Spin className="spin-loader" size="large" tip="Loading..." /> : null}
       <div className={styles.cards}>

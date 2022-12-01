@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Cart } from './pages/Cart/Cart';
 import { Create } from './pages/Create/Create';
 import { Main } from './pages/Main/Main';
+import Mytable from './pages/table/Table';
 import { View } from './pages/View/View';
 
 export const AppRoutes = () => {
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
         <Route path="/" element={<Main />} />
         <Route path="cart" element={<Cart />} />
         <Route path="create" element={<Create />} />
+        <Route path="table" element={<Mytable />} />
         <Route path="view/:id" element={<View />} />
       </Routes>
     </div>
